@@ -1,0 +1,21 @@
+# uvspec data files
+
+data_files_path /Users/dagoret/MacOSX/External/libRadtran/libRadtran-2.0.1/data/
+atmosphere_file /Users/dagoret/MacOSX/External/libRadtran/libRadtran-2.0.1/examples/AFGLUS.70KM
+source thermal /Users/dagoret/MacOSX/External/libRadtran/libRadtran-2.0.1/examples/UVSPEC_LOWTRAN_THERMAL.TRANS
+
+#atmosphere_file /Users/dagoret/MacOSX/External/libRadtran/libRadtran-2.0.1/data/atmmod/afglus.dat
+#data_files_path /Users/dagoret/MacOSX/External/libRadtran/libRadtran-2.0.1/data
+
+rte_solver twostr     # Radiative transfer equation solver
+pseudospherical
+wavelength_grid_file /Users/dagoret/MacOSX/External/libRadtran/libRadtran-2.0.1/examples/UVSPEC_LOWTRAN_THERMAL.TRANS
+
+mol_abs_param LOWTRAN  # select LOWTRAN molecular absorption 
+
+#output_process per_nm
+output_quantity brightness
+output_user lambda edn
+
+
+quiet
